@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CifraText: Seguridad en tus Mensajes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+       <div class="encriptar">
+          <textarea 
+         name = "texto" 
+         class= "texto" 
+         id= "texto" 
+         cols="30"  
+         rows="10" 
+         placeholder= "Ingrese el texto aqui">
+         </textarea>
+        
+     <div class="condiciones">
+        <p>Solo letras minúsculas y sin acentos</p>
+       </div>
+       <div class="botones">
+        <button class="btn_encriptar" type="button" onclick="encriptar ()"> 
+            Encriptar 
+        </button>
+        <input 
+        type="button" 
+        class="btn_desencriptar" 
+        value="Desencriptar" 
+        onclick="desencriptar()"
+        />
+        <button class="btn_desencriptar"> </button>
+       </div>
+     </div>
+    
+     <div class="encriptado">
+        <img src="" alt="" id="figura">
+        <div class="mensaje_encriptado" id="mensaje_encriptado">
+            <h2 id="titulo-mensaje"> Ningún mensaje encontrado </h2>
+            <p id="parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje">
+        </textarea>
+        </div>
+       </div>
+       </div>
+</body>
+<script src="script.js"></script>>
+</html>
+
