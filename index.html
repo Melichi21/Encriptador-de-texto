@@ -3,50 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CifraText: Seguridad en tus Mensajes</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
-       <div class="encriptar">
-          <textarea 
-         name = "texto" 
-         class= "texto" 
-         id= "texto" 
-         cols="30"  
-         rows="10" 
-         placeholder= "Ingrese el texto aqui">
-         </textarea>
-        
-     <div class="condiciones">
-        <p>Solo letras minúsculas y sin acentos</p>
-       </div>
-       <div class="botones">
-        <button class="btn_encriptar" type="button" onclick="encriptar ()"> 
-            Encriptar 
-        </button>
-        <input 
-        type="button" 
-        class="btn_desencriptar" 
-        value="Desencriptar" 
-        onclick="desencriptar()"
-        />
-        <button class="btn_desencriptar"> </button>
-       </div>
-     </div>
-    
-     <div class="encriptado">
-        <img src="" alt="" id="figura">
-        <div class="mensaje_encriptado" id="mensaje_encriptado">
-            <h2 id="titulo-mensaje"> Ningún mensaje encontrado </h2>
-            <p id="parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje">
-        </textarea>
+    <header>
+   
+        <img src="img/LogoLogoAlura.svg" alt="LogoLogoAlura"> </img>
+    </header>
+    <main> 
+      <form class="form_section"> 
+        <textarea class="form_input" name="mensaje" id="" cols="30" rows="10" 
+        placeholder="Ingrese el texto aquí..."></textarea>
+
+    <div class="btn_container"> </div>
+        <div class="alert"> <img src="img/LogoAlert.svg" alt="alert"> <span>Solo letras minúsculas y sin acentos. </span> </div>
+   
+     <input class="form_btn" type="submit" value="Encriptar">
+     <input class="form_btn form_btn--double" type="submit" value="Desencriptar">
+    </form>
+    <aside class="resultado">
+        <img src="img/Muñeco.svg" alt="Muñeco" class="resultado_img">
+        <div class="loader hidden"></div>
+        <div class="resultado_container">
+            <h3 class="resultado_titulo">Ningún mensaje fue encontrado</h3>
+            <p class="resultado_texto">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <button class=" result_btn form_btn form_btn--double hidden">Copiar</button>
         </div>
-       </div>
-       </div>
+    </aside>
+    </main>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>>
 </html>
 

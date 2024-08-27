@@ -1,0 +1,132 @@
+body {
+    background-image: url(img/background\ 1fondo.svg);
+    background-repeat: no-repeat;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+ }
+
+ header{
+    width:120px;
+    height: 48px;
+    margin-bottom: 50px;
+    width: 60%;
+ }
+ 
+ .form_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+ }
+
+ .form_input{
+    width: 100%;
+    max-width: 577px;
+    border-color: transparent;
+    border-radius:20px;
+    height: 64 dvh;
+    outline: none;
+    background: #9e3a97b6;
+    font-family: "Inter";
+   font-style: normal;
+   font-weight: 400;
+   font-size: 32px;
+   line-height: 150%;
+   overflow: auto;
+  
+ }
+
+ ::placeholder{
+    color: #0a3871;
+ }
+
+
+ .alert {
+    display: flex;
+    align-items: center;
+    gap: 1.7%;
+    font-size:13px;
+    margin-bottom:20px;
+    color: aqua;
+ }
+
+
+ .form_btn{
+    background: #3adde29a;
+    color: white;
+    font-size: 100%;
+    padding: 10px;
+    width: 328px;
+    border-radius: 24px;
+    height: 67px;
+    font-weight: 600;
+    border: 1px solid;
+ }
+
+ .form_btn--double {
+    background: #b73da4a9;
+    color: white;
+ }
+
+
+ .resultado {
+    background: rgba(76, 150, 214, 0.582);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 75dvh;
+    border-radius: 32px;
+    max-width: 400px;
+    width: 100%;
+
+
+ }
+ .resultado_img {
+    display: block;
+ }
+ .hidden{ 
+    display: none;
+ }
+
+ @media screen and (max-width:768px) {
+    main{ flex-direction: column; }
+    .resultado {
+        height: auto;
+        max-width: 624px;
+        margin-top: 32px;
+
+    }
+    .resultado_img {
+        display: none;}
+
+ } 
+ /* HTML: <div class="loader"></div> */
+.loader {
+  height: 30px;
+  aspect-ratio: 3;
+  --c:no-repeat linear-gradient(#514b82 0 0);
+  background:
+    var(--c) calc(0*100%/5) 50%,
+    var(--c) calc(1*100%/5) 50%,
+    var(--c) calc(2*100%/5) 50%,
+    var(--c) calc(3*100%/5) 50%,
+    var(--c) calc(4*100%/5) 50%,
+    var(--c) calc(5*100%/5) 50%;
+  background-size:calc(100%/6 + 1px) 50%;
+  animation: l19 1s infinite cubic-bezier(0.5,170,0.5,-170);
+}
+@keyframes l19 {
+    14.28% {background-position: calc(0*100%/5) 51%, calc(1*100%/5) 50%, calc(2*100%/5) 50%, calc(3*100%/5) 50%, calc(4*100%/5) 50%, calc(5*100%/5) 50%}
+    28.57% {background-position: calc(0*100%/5) 50%, calc(1*100%/5) 51%, calc(2*100%/5) 50%, calc(3*100%/5) 50%, calc(4*100%/5) 50%, calc(5*100%/5) 50%}
+    42.85% {background-position: calc(0*100%/5) 50%, calc(1*100%/5) 50%, calc(2*100%/5) 51%, calc(3*100%/5) 50%, calc(4*100%/5) 50%, calc(5*100%/5) 50%}
+    57.14% {background-position: calc(0*100%/5) 50%, calc(1*100%/5) 50%, calc(2*100%/5) 50%, calc(3*100%/5) 51%, calc(4*100%/5) 50%, calc(5*100%/5) 50%}
+    71.42% {background-position: calc(0*100%/5) 50%, calc(1*100%/5) 50%, calc(2*100%/5) 50%, calc(3*100%/5) 50%, calc(4*100%/5) 51%, calc(5*100%/5) 50%}
+    85.71% {background-position: calc(0*100%/5) 50%, calc(1*100%/5) 50%, calc(2*100%/5) 50%, calc(3*100%/5) 50%, calc(4*100%/5) 50%, calc(5*100%/5) 51%}
+}
