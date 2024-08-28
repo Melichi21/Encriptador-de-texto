@@ -1,20 +1,28 @@
 body {
+    margin: 0;
+    padding: 0;
     background-image: url(img/background\ 1fondo.svg);
+    background-size: cover; 
+    background-position: center;
     background-repeat: no-repeat;
-}
-
-main{
+    background-attachment: fixed; 
+ }
+main {
     display: flex;
     justify-content: space-around;
  }
 
- header{
+ .header{
     width:120px;
     height: 48px;
     margin-bottom: 50px;
-    width: 60%;
  }
  
+ .colorlogo {
+    color: aqua;
+    height: auto;
+ }
+
  .form_section{
     display: flex;
     flex-direction: column;
@@ -22,14 +30,24 @@ main{
     position: relative;
     width: 100vw;
     height: 100vh;
+    align-items: center;
  }
+
+ .btn_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100dvh;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
  .form_input{
     width: 100%;
     max-width: 577px;
     border-color: transparent;
     border-radius:20px;
-    height: 64 dvh;
+    height: 64 vh;
     outline: none;
     background: #9e3a97b6;
     font-family: "Inter";
@@ -38,7 +56,6 @@ main{
    font-size: 32px;
    line-height: 150%;
    overflow: auto;
-  
  }
 
  ::placeholder{
@@ -49,9 +66,9 @@ main{
  .alert {
     display: flex;
     align-items: center;
-    gap: 1.7%;
-    font-size:13px;
-    margin-bottom:20px;
+    gap: 12px;
+    font-size:19.2px;
+    margin-bottom:24px;
     color: aqua;
  }
 
@@ -59,8 +76,8 @@ main{
  .form_btn{
     background: #3adde29a;
     color: white;
-    font-size: 100%;
-    padding: 10px;
+    font-size: 16px;
+    padding: 10px 20px;
     width: 328px;
     border-radius: 24px;
     height: 67px;
@@ -76,12 +93,12 @@ main{
 
  .resultado {
     background: rgba(76, 150, 214, 0.582);
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    height: 75dvh;
+    gap: 8px;
+    /* height: 75dvh; */
     border-radius: 32px;
     max-width: 400px;
     width: 100%;
@@ -104,9 +121,29 @@ main{
 
     }
     .resultado_img {
-        display: none;}
+        display: none;
+    }
 
+    .resultado_container {
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: center;
+    animation-delay: unset;
+    }
+    @media (max-width: 768px) {
+        .btn_container {
+            flex-direction: column; /* Botones apilados en pantallas más pequeñas */
+        }
+        
+        .form_btn {
+            width: 100%; /* Botones ocupan el ancho completo */
+        }
+    }
  } 
+
+
  /* HTML: <div class="loader"></div> */
 .loader {
   height: 30px;

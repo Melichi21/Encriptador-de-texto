@@ -5,16 +5,16 @@ const loader = d.querySelector (".loader");
 const resultTitulo = d.querySelector (".resultado_titulo");
 const textoderecho = d.querySelector (".resultado_texto");
 const botonencriptar =d.querySelector (".form_btn");
-const botondesencriptar =d.querySelectorAll (".form_btn");
-const botoncopiar = d.querySelector ("result_btn");
+const botonDesencriptar =d.querySelectorAll (".form_btn");
+const botoncopiar = d.querySelector (".result_btn");
 
 //llaves del proyecto//
 const llaves = [
-    ["e", "enter"]
-    ["i", "imes"]
-    ["a", "ai"]
-    ["o", "ober"]
-    ["u", "ufat"]
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"],
 ];
 //Función para encriptar//
 
@@ -42,14 +42,15 @@ function encriptarmensaje (mensaje){
 function desencriptarmensaje (mensaje){
     let mensajeDesencriptado = mensaje;
     for (let i=0; i<llaves.length; i++ ){
-        let regex= new RegExp (llaves [i][1], "g");
-        mensajeEncriptado = mensajeDesencriptado.replace (regex,llaves [i][0])
+        let regex = new RegExp (llaves [i][1], "g");
+        mensajeDesencriptado = mensajeDesencriptado.replace (regex, llaves [i][0]);
+     }
+          return mensajeDesencriptado; 
     }
- return mensajeDesencriptado; 
-}
+    
 //Ocultar elementos dinamicamente
 textArea.addEventListener ("input", (e) => {
-    imagen.Style.display  = "none";
+    imagen.style.display  = "none";
     console.log (e.target.value); 
     loader.classList.remove (hidden); 
     resultTitulo.textContent= "Capturando mensaje";
@@ -75,13 +76,13 @@ botonDesencriptar [1].addEventListener("click", (e) => {
     botoncopiar.classList.remove ("hidden");
     resultTitulo.textContent= "El resultado es: ";
 })
-botoncopiar.addEventListener ("click", ()=> {
+botoncopiar.addEventListener("click", () => {
     let textoCopiado = textoderecho.textContent;
-    navigator.clipboard.writeText (textoCopiado). then ()=>{
-    imagen.Style.display = "block";
-    loader.classList.add (hidden);
-    resultTitulo.textContent = "El texto se copió";
-    botoncopiar.classList.add ("hidden");
-    textoderecho.textContent = ""
-    }
-})
+    navigator.clipboard.writeText(textoCopiado).then(() => {
+        imagen.style.display = "block";
+        loader.classList.add("hidden");
+        resultTitulo.textContent = "El texto se copió";
+        botoncopiar.classList.add("hidden");
+        textoderecho.textContent = "";
+    });
+});

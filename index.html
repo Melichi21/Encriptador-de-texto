@@ -9,20 +9,33 @@
 
 <body>
     <header>
-   
-        <img src="img/LogoLogoAlura.svg" alt="LogoLogoAlura"> </img>
+        <img src="img/LogoLogoAlura.svg" alt="LogoLogoAlura" class= "colorlogo" >
     </header>
+
     <main> 
       <form class="form_section"> 
-        <textarea class="form_input" name="mensaje" id="" cols="30" rows="10" 
-        placeholder="Ingrese el texto aquí..."></textarea>
+        <label for= "mensaje">             </label>    
+              <textarea class="form_input" 
+        name="mensaje" id="mensaje" cols="30" rows="10" 
+               placeholder ="Ingrese el texto aquí..."></textarea>
+    
+        <div class="btn_container"> 
+        <div class="alert"> 
+            <img src="img/LogoAlert.svg" 
+                 alt="alert"> <span>
+                    Solo letras minúsculas y sin acentos.
+                 </span>        </div>
 
-    <div class="btn_container"> </div>
-        <div class="alert"> <img src="img/LogoAlert.svg" alt="alert"> <span>Solo letras minúsculas y sin acentos. </span> </div>
-   
-     <input class="form_btn" type="submit" value="Encriptar">
-     <input class="form_btn form_btn--double" type="submit" value="Desencriptar">
-    </form>
+     <input class="form_btn" 
+             type="button" 
+            value="Encriptar">
+
+     <input class="form_btn form_btn--double"  
+            type="button" 
+            value="Desencriptar"> </div></form>
+
+
+            
     <aside class="resultado">
         <img src="img/Muñeco.svg" alt="Muñeco" class="resultado_img">
         <div class="loader hidden"></div>
@@ -34,6 +47,8 @@
     </aside>
     </main>
     <script src="script.js"></script>
+
 </body>
+
 </html>
 
